@@ -1,0 +1,1 @@
+// weather API, currency exchange rate API and etc.
