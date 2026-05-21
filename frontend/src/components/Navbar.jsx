@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 
-function PokeNavbar() {
+function Navbar() {
   return (
     <nav className="navbar">
       <div className="center">
@@ -10,4 +10,4 @@ function PokeNavbar() {
   );
 }
 
-export default PokeNavbar;
+export default Navbar;
