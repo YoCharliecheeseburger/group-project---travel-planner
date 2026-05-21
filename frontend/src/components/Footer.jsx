@@ -1,8 +1,10 @@
-import React from 'react'
-
 function Footer() {
   return (
-    <div>Footer</div>
+    <div className='footer'>
+      <div className='footerContent'>
+        <h1>Made by SSG</h1>
+      </div>
+    </div>
   )
 }
 

@@ -1,9 +1,13 @@
-import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-function Navbar() {
+function PokeNavbar() {
   return (
-    <div>Navbar</div>
-  )
+    <nav className="navbar">
+      <div className="center">
+        <NavLink to="/">Home</NavLink>
+      </div>
+    </nav>
+  );
 }
 
-export default Navbar
+export default PokeNavbar;
