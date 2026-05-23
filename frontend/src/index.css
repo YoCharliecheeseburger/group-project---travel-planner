@@ -1,29 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+  font-family: sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
 .navbar {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    display: flex;
-    height: 80px;
-    background-color: #c8c8c8;
-    border-bottom: 0.05rem solid rgb(225, 225, 225);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  height: 80px;
+  background: linear-gradient(205deg, #667eea 0%, #764ba2 100%);
 }
 
-.navbar a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-weight: bold;
-    color: rgb(0, 0, 0);
-    font-size: 1.5rem;
-    height: 100%;
-    width: 140px;
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.navbarLogo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logoLink {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.logoLink:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.navMenu {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+  padding: 15px 30px;
+  height: 50px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+
+  background-color: rgba(255, 255, 255, 0.3);
+  border-bottom: 3px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navLink:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .homePage {
@@ -34,12 +90,6 @@ body {
     min-height: 100vh;
 }
 
-
-.navbar a:hover {
-    background-color: rgb(18, 18, 18);
-    color: rgb(255, 255, 255);
-    opacity: 0.8;
-}
 
 .footer {
     background-color: #1e1e1e;
