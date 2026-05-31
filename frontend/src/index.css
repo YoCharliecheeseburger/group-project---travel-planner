@@ -1,0 +1,19 @@
+.inputs, .estimated, .dashboard{
+    background-color: #F4F7FA;
+    color: #1F2D3D;
+    border: 2px solid #5ED1C1;
+    display: flexbox;
+    max-width: 40%;
+}
+
+.inputs > * {
+    margin: 12px 0;
+}
+
+input{
+    max-width: 50%;
+}
+
+.Calculator > *{
+    margin: 10px 0 ;
+}
