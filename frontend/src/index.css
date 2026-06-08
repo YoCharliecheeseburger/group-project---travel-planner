@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   font-family: sans-serif;
   background-color: #f8f9fa;
@@ -18,6 +23,7 @@ body {
   top: 0;
   height: 80px;
   background: linear-gradient(205deg, #667eea 0%, #764ba2 100%);
+  z-index: 10000;
 }
 
 .navbarContainer {
@@ -39,6 +45,7 @@ body {
   font-size: 1.8rem;
   color: white;
   transition: all 0.3s ease;
+  z-index: 10000;
 }
 
 .logoLink:hover {
@@ -101,4 +108,553 @@ body {
 
 .footerContent {
     padding: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+.topSection {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.searchBar {
+  margin-bottom: 20px;
+  width: 38%;
+}
+
+.topSection.centered {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.searchBarInput {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.searchBarInput:focus {
+  outline: none;
+  border-color: #2196F3;
+}
+
+.loadingThing {
+  margin-top: 10px;
+  color: #666;
+}
+
+.suggestionsDropdown {
+  position: absolute;
+  width: 38%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  margin-top: 5px;
+  list-style: none;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.suggestionItem {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.suggestionItem:hover {
+  background-color: #f5f5f5;
+}
+
+.suggestionItem:last-child {
+  border-bottom: none;
+}
+
+.suggestionName {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.suggestionThing {
+  font-size: 12px;
+  color: #666;
+}
+
+.popularDestinations {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.popularDestinations h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.destination-btn {
+  padding: 12px 15px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.destination-btn:hover {
+  background-color: #1976D2;
+}
+
+.selectedLocation {
+  width: 20%;
+  background-color: #e3f2fd;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #2196F3;
+  margin-bottom: 20px;
+}
+
+.selectedLocation h2 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.tripButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.saveTrip {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.saveTrip:hover {
+  background-color: #45a049;
+}
+
+.clearTrip {
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.clearTrip:hover {
+  background-color: #da190b;
+}
+
+.homeInsides {
+  width: 100vw;
+  margin-bottom: 50px;
+  height: 100%;
+}
+
+.SavedTrips {
+  padding: 30px;
+}
+
+.homeInsidesMyTrips h2 {
+  margin-left: 20px;
+}
+
+.SavedTrips h3 {
+  margin-bottom: 10px;
+}
+
+.SavedTrips button {
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.tripCard {
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #f5f5f5;
+  border-left: 4px solid #4CAF50;
+  border-radius: 4px;
+}
+
+.tripCard:hover {
+  transform: scale(1.02);
+}
+
+.tripName {
+  font-weight: bold;
+  color: #333;
+}
+
+.tripDate {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.messageThingy {
+  text-align: center;
+  color: #999;
+  padding: 10px 0px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.messageThingy p {
+  font-size: 20px;
+}
+
+.savedTripsInside {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+.mapSidebarHolder {
+  display: flex;
+  width: 100%;
+  height: 700px;
+  padding: 0 50px;
+  overflow: hidden;
+}
+
+.mapParent {
+  flex: 3;
+  height: 100%;
+  margin: 20px;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.mapSidebar {
+  flex: 1;
+  min-width: 350px;
+  padding: 16px;
+  background: white;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+.attractionsScroll {
+  max-height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.attractionCard {
+  position: relative;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #f7f7f7;
+  cursor: pointer;
+  transition: 0.2s;
+  min-height: 70px;
+}
+
+.attractionCard:hover {
+  background: #eaeaea;
+  transform: scale(1.02);
+}
+
+.attractionSave {
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+
+.attractionRemove {
+  right: 15px;
+  bottom: 5px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.attractionSave:not(.saved) {
+  background: #2563eb;
+  color: white;
+}
+
+.attractionSave:not(.saved):hover {
+  background: #1d4ed8;
+}
+
+.attractionSave.saved, .attractionRemove.saved {
+  background: #ef4444;
+  color: white;
+}
+
+.attractionSave.saved:hover, .attractionRemove.saved:hover {
+  background: #dc2626;
+}
+
+
+.savedRestAttrList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.savedRestAttrCard {
+  padding: 10px;
+  border-radius: 8px;
+  background: #f3f4f6;
+  border-left: 4px solid #2563eb;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.savedRestAttrCard:hover {
+  background: #e5e7eb;
+  transform: translateX(2px);
+}
+
+
+.markerPopup {
+  width: 200px;
+}
+
+.markerPopup h4 {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.markerPopup p {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.markerPopup button {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+
+
+
+.weather-card {
+  padding: 16px;
+  border-radius: 10px;
+  margin: 10px 20px;
+  background: white;
+}
+
+.weather-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.weather-temp,
+.weather-status {
+  margin: 5px 0;
+}
+
+.weather-forecast-title {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.weather-forecast {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.forecast-card {
+  min-width: 80px;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.forecast-day {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.forecast-temp {
+  font-size: 16px;
+}
+
+.forecast-type {
+  font-size: 12px;
+  color: #666;
+}
+
+.weather-loading,
+.weather-error,
+.weather-empty {
+  padding: 10px;
+}
+.weather-error {
+  color: red;
+}
+
+
+.currencyConv {
+  background-color: white;
+}
+
+
+.trip-budget-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.trip-budget-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.trip-budget-dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.trip-budget-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  border-top: 4px solid #2bc48a;
+}
+
+.trip-budget-card--spent {
+  border-top-color: #3498db;
+}
+
+.trip-budget-card--balance {
+  border-top-color: #f1c40f;
+}
+
+.trip-budget-amount {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.trip-budget-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.trip-budget-panel {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.trip-budget-input-group {
+  margin-bottom: 15px;
+}
+
+.trip-budget-input-group input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.trip-budget-category {
+  margin-bottom: 20px;
+}
+
+.trip-budget-category-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.trip-budget-progress-bar {
+  background: #ddd;
+  height: 8px;
+  border-radius: 5px;
+}
+
+.trip-budget-progress-fill {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.3s ease;
 }

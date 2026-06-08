@@ -14,7 +14,7 @@ function Navbar() {
 
         <ul className="navMenu">
           <li className="navItem">
-            <NavLink to="/savedTrips" className="navLink">My Trips</NavLink>
+            <NavLink to="/SavedTrips" className="navLink">My Trips</NavLink>
           </li>
         </ul>
 
